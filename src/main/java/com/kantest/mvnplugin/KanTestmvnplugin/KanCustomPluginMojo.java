@@ -10,14 +10,14 @@ import org.apache.maven.project.MavenProject;
 
 /**
  * 
+ * An example of mavenMojo to create a sample maven plugin.
  * @author kannannair
- *
  */
 @Mojo(name="version", defaultPhase=LifecyclePhase.INITIALIZE)
 public class KanCustomPluginMojo extends AbstractMojo {
 
 	
-	@Parameter(property="git.command",defaultValue="git rev-pars")
+	@Parameter(property="git.command",defaultValue="abcd")
 	private String command;
 	
 	@Parameter(property="project", readonly=true)
@@ -25,10 +25,10 @@ public class KanCustomPluginMojo extends AbstractMojo {
 	
 	@Override
 	public void execute() throws MojoExecutionException, MojoFailureException {
-		getLog().info("A maven plugin : Kan");
+		getLog().info("command value is : " + command);
 		project.getProperties().put("Git hash", "2.1111");
 		
 	}
-
+//command to run the plugin : mvn com.kantest.mvnplugin:KanTestmvnplugin:version
 	
 }

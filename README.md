@@ -1,3 +1,4 @@
 # Maven_Learning
 
--Create Maven plugin
+-Create new custom Maven plugin
+-Use existing Maven rerporting plugins inside <reporting> tag
