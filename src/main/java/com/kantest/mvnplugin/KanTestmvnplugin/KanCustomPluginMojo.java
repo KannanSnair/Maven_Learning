@@ -29,6 +29,6 @@ public class KanCustomPluginMojo extends AbstractMojo {
 		project.getProperties().put("Git hash", "2.1111");
 		
 	}
-//command to run the plugin : mvn com.kantest.mvnplugin:KanTestmvnplugin:version
+//command to run the plugin : mvn com.kantest.mvnplugin:KanTestmvnplugin:version -Dgit.command=kannan
 	
 }
